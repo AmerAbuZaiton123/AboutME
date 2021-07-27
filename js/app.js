@@ -59,4 +59,4 @@ else {
 }
 
 
-alert("you Guess  " + count + " from 5 question")
+alert("you Guess  " + count + " from 5 question thanks "+name);
