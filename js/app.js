@@ -1,117 +1,163 @@
 'use strict'
 var count = 0;
-var userName = prompt("Enter Your Name")
-alert("welcome " + userName + " to my website   ")
-alert(" I will play a guessing game with you and ask you five questions, I hope we answer with type (yes/no  or y/n) ")
+function userName(alertText0) {
 
-let input1 = prompt("Question one :Guessing The owner of this site is male ")
-if (input1.toLocaleLowerCase() == 'yes' || input1.toLocaleLowerCase() == 'y') {
-     console.log(input1 + "\n" + "rigth")
-    alert("rigth answer")
-    count++;
-}
-else {
-    alert("wrong answer")
-}
-let input2 = prompt("Question one :Guessing The owner of this site love cooking")
-if (input2.toLocaleLowerCase() == 'yes' || input2.toLocaleLowerCase() == 'y') {
-    console.log(input2 + "\n" + "rigth")
-    alert("rigth answer")
-    count++
-}
-else {
-    alert("wrong answer")
 
-}
-
-let input3 = prompt("Question one :Guessing The owner of this site is  young ")
-if (input3.toLocaleLowerCase() == 'yes' || input3.toLocaleLowerCase() == 'y') {
-    console.log(input3 + "\n" + "rigth")
-    alert("rigth answer")
-    count++;
-}
-else {
-    alert("wrong answer")
-
-}
-
-var input4 = prompt("Question one : Do you expect that the owner of the page is tall?")
-if (input4.toLocaleLowerCase() == 'yes' || input4.toLocaleLowerCase() == 'y') {
-
-    alert("wrong answer")
-
-}
-else {
-    console.log(input4 + "\n" + "rigth")
-    alert("rigth answer")
-    count++;
-}
-
-var input5 = prompt("Question one : Do you expect that the owner of the page is fat?")
-if (input5.toLocaleLowerCase() == 'yes' || input5.toLocaleLowerCase() == 'y') {
-    alert("wrong answer")
-
-}
-else {
-    console.log(input5 + "\n" + "rigth")
-    alert("rigth answer")
-    count++;
+    var UserName = prompt(alertText0)
+    return UserName
 }
 
 
-/*new game */ 
-var res=[];
-const secretnumber=5;
-alert(userName+"I will play a number guessing game with you .All you have to do is enter a number each time and you have four attempts ");
-for(let i=0;i<=4;i++){ 
-let gissNumber=parseInt( prompt("Enter attempt number   "+ i ));
-if(gissNumber == secretnumber )
-{
- alert( "rigth you win")
- res[i]="rigth answer" 
- count++
+function gissGender(alertText1) {
+    let input1 = prompt(alertText1)
+    if (input1.toLocaleLowerCase() == 'yes' || input1.toLocaleLowerCase() == 'y') {
+        return input1 + "\t" + "rigth answer"
+        count++
+    }
+    else {
+        return input1 + "\t" + "wrong answer"
+
+    }
 }
- else if (gissNumber <secretnumber ) 
-{
-alert("too low")
-res[i]="wrong answer" 
-       
+
+function gissAge(alertText2) {
+    let input2 = prompt(alertText2)
+    if (input2.toLocaleLowerCase() == 'yes' || input2.toLocaleLowerCase() == 'y') {
+        return input2 + "\t" + "rigth answer"
+        count++
+    }
+    else {
+        return input2 + "\t" + "wrong answer"
+
+    }
 }
- else if( gissNumber > secretnumber)     
-{
-    alert("too high")
+
+function gissMarrid(alertText3) {
+    let input3 = prompt(alertText3)
+    if (input3.toLocaleLowerCase() == 'yes' || input3.toLocaleLowerCase() == 'y') {
+        
+        return input3 + "\t" + "wrong answer"
+
+    }
+    else {
+        return input3 + "\t" + "rigth answer"
+        count++
+    }
+}
+
+
+function gissFavFood(alertText4) {
+    let input4 = prompt(alertText4)
+    if (input4.toLocaleLowerCase() == 'yes' || input4.toLocaleLowerCase() == 'y') {
+        
+        return input4 + "\t" + "wrong answer"
+
+    }
+    else {
+        return input4 + "\t" + "rigth answer"
+        count++
+    }
+}
+
+
+function gissCountry(alertText5) {
+    let input5 = prompt(alertText5)
+    if (input5.toLocaleLowerCase() == 'yes' || input5.toLocaleLowerCase() == 'y') {
+        
+        return input5 + "\t" + "wrong answer"
+
+    }
+    else {
+        return input5 + "\t" + "rigth answer"
+        count++
+    }
+}
+
+function SecretNumber(alertText6,userName,attempte,secretNum)
+{  var res=[];
+    alert(userName+alertText6)
+    for(let i =1;i<attempte;i++){  
+    let resualt=Number( prompt("Enter attempte number "+i))
+    if(resualt == secretNum )
+    {
+     alert( "rigth you win")
+     res[i]="rigth answer" 
+     count++
+     break
+    }
+     else if (resualt <secretNum ) 
+    {
+    alert("too low")
     res[i]="wrong answer" 
+           
+    }
+     else if(resualt >secretNum)     
+    {
+        alert("too high")
+        res[i]="wrong answer" 
+        
+    }
+}
     
+    for(var k=0;k < res.length;k++){  
+        alert("attempt number"+k+1+"is:"+res[k])
+        console.log(res[k])
+    }
+   return res[k]+"you win"
 }
 
-}
-
-for(var k=0;k < res.length;k++){  
-alert("attempt number"+k+1+"is:"+res[k])
-console.log(res[k])
-}
-  
-var color=['red','green','blue'];
-alert("You will guess in this game my 3 favert color and you have 6 attempt")
-var countgiss=0;
-var i=0;
-
-while(i<6)
+function favcolor(alertText7,UserName1)
 {
-   let giss1= prompt("Enter attempt number "+i).toLocaleLowerCase();
-   if(giss1== color[0] || giss1== color[1] || giss1== color[2])
-   {  alert("you giss one color")
-       countgiss++;
-       count++
-       break;  
+    let color=['red','green','blue ','yallow','black','white']
+
+    let gisscolor= prompt(UserName1+alertText7)
+for(var i=0;i<6;i++){
+        for(var k=0;k<=color.length;k++)
+        {
+            if(gisscolor === color[k])
+            {
+                alert('oh you giss my fav color ');
+               count++
+               return'oh you giss my fav color '
+               breck ;
+             
+            }
+        }  
+     gisscolor=prompt(UserName1+ alertText7)
+     if(i===5){
+     alert("you diint giss correct answer")
+      return "you diint giss correct answer"
     }
-   else
-   {   
-       i++
-       alert("try again")
-       countgiss++
-      continue
-    }
-}alert("you win from attempt number "+countgiss)
-alert("the right answer red,green,blue");
-alert("you Guess  " + count + " from 7 question thanks "+userName);
+ }
+return gisscolor;
+
+}
+let attempte=4
+let secretNum=8;
+let UserName1 = userName("Enter You Name");
+alert(" I will play a guessing game with you and ask you 7 questions, I hope we answer with type (yes/no  or y/n) ")
+let input1 = gissGender("Question one :do you thing the owner of this site is male (yes/y  OR no/n) ")
+console.log(input1)
+alert(input1);
+let input2 = gissAge("Question Two :Do you thing my age less then 26 (yes/y  OR no/n)")
+console.log(input2)
+alert(input2)
+let input3 = gissMarrid("Question Three :Do you thing i am married  (yes/y  OR no/n)")
+console.log(input3)
+alert(input3)
+let input4 = gissFavFood("Question Three :Do you thing Mansaf is my fevorite Food (yes/y  OR no/n)")
+console.log(input4)
+alert(input4)
+let input5 = gissCountry("Question Three :Do you thing iam from Jorden (yes/y  OR no/n)")
+console.log(input5)
+alert(input5)
+
+let input6=SecretNumber(UserName1,"I will play a number guessing game with you .All you have to do is enter a number each time and you have four attempts ",attempte,secretNum );
+console.log(input6)
+alert(input6) 
+alert("Correct answer is number 8");
+
+let input7=favcolor("I will play a color guessing game with you .All you have to do is enter a color each time and you have six attempts ",UserName1);
+console.log(input7)
+alert(input7) 
+alert("Correct answer is number red or white or black or blue or green or yallow ");
