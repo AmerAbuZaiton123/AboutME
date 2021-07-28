@@ -76,7 +76,7 @@ function gissCountry(alertText5) {
 function SecretNumber(alertText6,userName,attempte,secretNum)
 {  var res=[];
     alert(userName+alertText6)
-    for(let i =1;i<attempte;i++){  
+    for(let i =1;i<=attempte;i++){  
     let resualt=Number( prompt("Enter attempte number "+i))
     if(resualt == secretNum )
     {
