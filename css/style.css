@@ -1,24 +1,39 @@
 body{
-    background-color:rgb(37, 50, 55);    }
 
-    P{  padding-left: 40%;      
-         padding-right:  40%;
-     background-color:rgb(37, 50, 55);
+    background-color:rgb(37, 50, 55);   
     color: white;
- }
+    font-family: system-ui;
+   
+}
+header{
+    text-align: center;
+    border-bottom: double;
+    padding-bottom: 10px;
+}
 
 img{
-     padding-left: 500px;
-     height: 500px;
-    width: 500px;
-   }
-.one
-{ 
-    margin-left:30% ;
-    margin-right:30% ;
-    background-color: gray;
-    padding-left:50px ;
+    
 
 }
-li
-{font-size: large ;}
+article p
+{   margin:20px 30%;
+    border: 3px solid blanchedalmond;
+    text-align: center;  
+    font-size: medium;
+    color:floralwhite;
+}
+article img
+
+{ 
+ margin-top:20px; 
+margin-right: 452px;
+ width: 600px;
+float:right;
+}
+
+ ol, h3,ul ,li{
+     color: antiquewhite; 
+      margin-left: 40px;
+}
+  
+li{color:grey}
